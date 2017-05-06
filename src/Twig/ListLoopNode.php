@@ -1,6 +1,6 @@
 <?php
 
-namespace Aaronadal\ListTwigTag\Twig;
+namespace Aaronadal\TwigListLoop\Twig;
 
 
 use Twig_Node_Expression;

@@ -17,7 +17,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Aaronadal\\ListTwigTag\\": "src/"
+      "Aaronadal\\TwigListLoop\\": "src/"
     }
   },
   "autoload-dev": {

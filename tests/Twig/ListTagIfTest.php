@@ -3,7 +3,7 @@
 namespace Aaronadal\Tests\Twig;
 
 
-use Aaronadal\ListTwigTag\Twig\TwigExtension;
+use Aaronadal\TwigListLoop\Twig\TwigExtension;
 
 /**
  * @author Aarón Nadal <aaronadal.dev@gmail.com>
