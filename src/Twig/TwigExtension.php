@@ -3,10 +3,12 @@
 namespace Aaronadal\TwigListLoop\Twig;
 
 
+use Twig\Extension\AbstractExtension;
+
 /**
  * @author Aarón Nadal <aaronadal.dev@gmail.com>
  */
-class TwigExtension extends \Twig_Extension
+class TwigExtension extends AbstractExtension
 {
 
     public function getTokenParsers()
@@ -15,5 +17,4 @@ class TwigExtension extends \Twig_Extension
             new ListTokenParser(),
         );
     }
-
 }

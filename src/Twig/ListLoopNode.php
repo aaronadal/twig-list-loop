@@ -3,27 +3,28 @@
 namespace Aaronadal\TwigListLoop\Twig;
 
 
-use Twig_Node_Expression;
-use Twig_Node_Expression_AssignName;
+use Twig\Node\Expression\AbstractExpression;
+use Twig\Node\Expression\AssignNameExpression;
+use Twig\Node\ForNode;
 
 /**
  * Compiles the loop of the list tag.
  *
  * @author Aarón Nadal <aaronadal.dev@gmail.com>
  */
-class ListLoopNode extends \Twig_Node_For
+class ListLoopNode extends ForNode
 {
 
     /**
      * Creates a new ListLoopNode instance.
      *
-     * @param Twig_Node_Expression_AssignName $keyTarget
-     * @param Twig_Node_Expression_AssignName $valueTarget
-     * @param Twig_Node_Expression            $seq
-     * @param Twig_Node_Expression            $if
-     * @param ListLoopBodyNode                $body
-     * @param Twig_Node_Expression            $lineno
-     * @param null                            $tag
+     * @param AssignNameExpression $keyTarget
+     * @param AssignNameExpression $valueTarget
+     * @param AbstractExpression   $seq
+     * @param AbstractExpression   $if
+     * @param ListLoopBodyNode     $body
+     * @param int                  $lineno
+     * @param null                 $tag
      */
     public function __construct($keyTarget, $valueTarget, $seq, $if, $body, $lineno, $tag = null)
     {
