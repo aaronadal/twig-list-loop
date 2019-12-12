@@ -4,17 +4,21 @@ namespace Aaronadal\Tests\Twig;
 
 
 use Aaronadal\TwigListLoop\Twig\TwigExtension;
+use PHPUnit_Framework_TestCase;
+use Twig\Environment;
+use Twig\Extension\StringLoaderExtension;
+use Twig\Loader\ArrayLoader;
 
 /**
  * @author Aarón Nadal <aaronadal.dev@gmail.com>
  */
-class ListTagTest extends \PHPUnit_Framework_TestCase
+class ListTagTest extends PHPUnit_Framework_TestCase
 {
 
     const ENABLE_CACHE = false;
 
     /**
-     * @var \Twig_Environment
+     * @var Environment
      */
     private $twig;
 
@@ -47,8 +51,8 @@ class ListTagTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->twig = new \Twig_Environment(new \Twig_Loader_Array(array()));
-        $this->twig->addExtension(new \Twig_Extension_StringLoader());
+        $this->twig = new Environment(new ArrayLoader(array()));
+        $this->twig->addExtension(new StringLoaderExtension());
         $this->twig->addExtension(new TwigExtension());
 
         if(self::ENABLE_CACHE) {
