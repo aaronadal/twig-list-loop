@@ -42,7 +42,12 @@ class ListLoopBodyNode extends Node
 
     public function compile(Compiler $compiler)
     {
-        $compiler->write("ob_start();\n")->subcompile($this->getNode('body'))->subcompile($this->getNode('var'))->raw(
-            "[")->subcompile($this->getNode('key'))->raw("] = ob_get_clean();\n");
+        $compiler
+            ->write("ob_start();\n")
+            ->subcompile($this->getNode('body'))
+            ->subcompile($this->getNode('var'))
+            ->raw("[")
+            ->subcompile($this->getNode('key'))
+            ->raw("] = ob_get_clean();\n");
     }
 }
